@@ -22,11 +22,11 @@ app.use(cookieParser());
 app.use(
    cors({
       credentials: true,
-      origin: "http://localhost:5173",
+      origin: "*",
    })
 );
 
-mongoose.connect(process.env.MONGO_URL);
+mongoose.connect('mongodb+srv://shivan0972:abcd1234@cluster0.ok3olmc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
 
 const storage = multer.diskStorage({
    destination: (req, file, cb) => {
