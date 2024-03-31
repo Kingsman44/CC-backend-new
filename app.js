@@ -19,7 +19,12 @@ var app = express();
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
+app.use(
+   cors({
+      credentials: true,
+      origin: "https://nice-beach-0b7202610.5.azurestaticapps.net",
+   })
+);
 
 mongoose.connect('mongodb+srv://shivan0972:abcd1234@cluster0.ok3olmc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
 
