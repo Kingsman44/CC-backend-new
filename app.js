@@ -22,9 +22,7 @@ app.use(cookieParser());
 app.use(
    cors({
       credentials: true,
-      origin: "*",
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "*",
+      origin: "https://kletechbackendnew.azurewebsites.net",
    })
 );
 
